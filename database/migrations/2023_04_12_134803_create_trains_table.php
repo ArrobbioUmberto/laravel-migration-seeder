@@ -18,8 +18,8 @@ return new class extends Migration
             $table->string('company', 50);
             $table->string('departure station', 100);
             $table->string('arrival station', 100);
-            $table->time('departure time');
-            $table->time('arrival time');
+            $table->dateTime('departure time');
+            $table->dateTime('arrival time');
             $table->tinyInteger('number of coaches');
             $table->tinyInteger('on schedule')->unsigned()->default(1);
             $table->tinyInteger('cancelled')->unsigned()->default(0);
