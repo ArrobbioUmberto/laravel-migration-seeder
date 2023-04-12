@@ -15,14 +15,14 @@ return new class extends Migration
     {
         Schema::create('trains', function (Blueprint $table) {
             $table->id();
-            $table->string('factory');
-            $table->string('departure station');
-            $table->string('arrival station');
-            $table->dateTime('departure time');
-            $table->dateTime('arrival time');
+            $table->string('company', 50);
+            $table->string('departure station', 100);
+            $table->string('arrival station', 100);
+            $table->time('departure time');
+            $table->time('arrival time');
             $table->tinyInteger('number of coaches');
             $table->tinyInteger('on schedule')->unsigned()->default(1);
-            $table->tinyInteger('cancelled');
+            $table->tinyInteger('cancelled')->unsigned()->default(0);
             $table->timestamps();
         });
     }
