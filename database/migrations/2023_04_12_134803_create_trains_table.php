@@ -16,12 +16,12 @@ return new class extends Migration
         Schema::create('trains', function (Blueprint $table) {
             $table->id();
             $table->string('company', 50);
-            $table->string('departure station', 100);
-            $table->string('arrival station', 100);
-            $table->dateTime('departure time');
-            $table->dateTime('arrival time');
-            $table->tinyInteger('number of coaches');
-            $table->tinyInteger('on schedule')->unsigned()->default(1);
+            $table->string('departure_station', 100);
+            $table->string('arrival_station', 100);
+            $table->dateTime('departure_time');
+            $table->dateTime('arrival_time');
+            $table->tinyInteger('number_of_coaches');
+            $table->tinyInteger('on_schedule')->unsigned()->default(1);
             $table->tinyInteger('cancelled')->unsigned()->default(0);
             $table->timestamps();
         });
