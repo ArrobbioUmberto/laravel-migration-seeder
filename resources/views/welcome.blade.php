@@ -13,7 +13,7 @@
                 <p class="card-text">Partenza: {{$train->departure_time}}</p>
                 <p class="card-text">Arrivo: {{$train->arrival_time}}</p>
                 <p class="card-text">Numero carrozze: {{$train->number_of_coaches}}</p>
-                <p class="card-text"><small class="text-body-secondary">In orario: {{$train->on_schedule}}</small></p>
+                <p class="card-text"><small class="text-body-secondary">In orario: @if (($train->on_schedule) === 1) SI @elseif(($train->on_schedule) === 0) NO @else - @endif</small></p>
             </div>
         </div>
         @empty
